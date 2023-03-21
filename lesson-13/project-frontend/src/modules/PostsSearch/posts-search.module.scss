@@ -1,0 +1,46 @@
+.heading {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 25px 0;
+    text-align: center;
+}
+
+.list {
+    margin: 30px 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+.item {
+    border: 1px solid;
+    border-radius: 10px;
+    padding: 15px;
+    cursor: pointer;
+
+    &Title {
+        font-size: 16px;
+        font-weight: bold;
+        margin-bottom: 15px;
+    }
+}
+
+.error {
+    color: red;
+    margin-bottom: 25px;
+}
+
+.details {
+    &Title {
+        font-weight: bold;
+        font-size: 18px;
+        margin-bottom: 25px;
+        text-align: center;
+    }
+
+    &Content {
+        font-size: 16px;
+        line-height: 24px;
+        margin-bottom: 15px;
+    }
+}

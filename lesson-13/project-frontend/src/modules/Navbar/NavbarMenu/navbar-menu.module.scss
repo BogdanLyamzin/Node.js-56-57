@@ -1,0 +1,19 @@
+.menu {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+.link {
+    display: inline-block;
+    padding: 10px 20px;
+    border: 1px solid red;
+    color: red;
+    text-decoration: none;
+
+    &:global(.active) {
+        background-color: red;
+        color: white;
+    }
+    // .navbar-menu_link__+75yn.active
+}
