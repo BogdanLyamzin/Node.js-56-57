@@ -32,7 +32,8 @@ app.get("/api/books", (req, res)=> {
 // upload.fields([{name: "cover", maxCount: 1}, {name: "subcover", maxCount: 2}])
 // upload.array("cover", 8)
 const booksDir = path.join(__dirname, "public", "books");
-app.post("/api/books", upload.single("cover"), async(req, res)=> {
+app.post("/api/books", upload.single("avatar"), async(req, res)=> {
+    console.log('req.file', req.file)
     const {path: tempUpload, originalname} = req.file;
     const resultUpload = path.join(booksDir, originalname);
     await fs.rename(tempUpload, resultUpload);

@@ -17,3 +17,13 @@ wsServer.on("connection", (socket)=> {
         }
     })
 });
+
+socket.on("close", () => {
+    // Найти индекс сокета в массиве socketList
+    const index = socketList.indexOf(socket);
+    if (index !== -1) {
+      // Удалить сокет из массива
+      socketList.splice(index, 1);
+    }
+    console.log("User disconnected");
+  });
